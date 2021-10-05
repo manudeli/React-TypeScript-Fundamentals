@@ -1,9 +1,16 @@
-import styled from '@emotion/styled'
+interface Props {
+  width: number
+  height: 12 | 32
+  backgroundColor: 'red' | 'blue'
+}
 
-const Box = styled.div`
-  width: 100px;
-  height: 100px;
-  background-color: blue;
-`
+const Box = ({ width = 100, height = 32, backgroundColor = 'red' }: Props) => {
+  const style = {
+    width,
+    height,
+    backgroundColor,
+  }
+  return <div style={style}> </div>
+}
 
 export default Box

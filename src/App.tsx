@@ -1,30 +1,12 @@
-import { ReactNode } from 'react'
-import Box from './components/Box'
-import { css } from '@emotion/react'
-
-const style = css`
-  color: hotpink;
-`
-
-interface SomeComponentProps {
-  children?: ReactNode
-}
-
-const SomeComponent = ({ children }: SomeComponentProps) => (
-  <div css={style}>
-    Some hotpink text.
-    {children}
-  </div>
-)
+import { useState } from 'react'
+import ShowSum from './components/ShowSum'
 
 function App() {
+  const [label, setLabel] = useState('Result')
   return (
     <div>
-      <div style={{ width: 200, height: 100, backgroundColor: 'black' }}></div>
-      <div css={{ width: 200, height: 100, backgroundColor: 'black' }}></div>
-
-      <SomeComponent />
-      <Box bgColor="red" />
+      <button onClick={() => setLabel(label + ':')}>Change Label</button>
+      <ShowSum label={label} n={1000000000} />
     </div>
   )
 }

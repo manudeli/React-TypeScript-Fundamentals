@@ -1,12 +1,14 @@
 import { useState } from 'react'
-import ShowSum from './components/ShowSum'
+import Box from './components/Box'
 
 function App() {
-  const [label, setLabel] = useState('Result')
+  const [count, setCount] = useState(0)
+
   return (
     <div>
-      <button onClick={() => setLabel(label + ':')}>Change Label</button>
-      <ShowSum label={label} n={1000000000} />
+      {count}
+      <button onClick={() => setCount(count + 1)}>+</button>
+      <Box />
     </div>
   )
 }

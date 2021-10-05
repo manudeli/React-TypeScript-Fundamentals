@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { ReactNode } from 'react'
 import Box from './components/Box'
 import { css } from '@emotion/react'

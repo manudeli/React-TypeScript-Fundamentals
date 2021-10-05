@@ -1,20 +1,16 @@
-import { ChangeEvent, memo } from 'react'
-
 interface Props {
   label: string
-  on?: boolean
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
+  checked: boolean
+  onChange: () => {}
 }
 
-const Checkbox = memo(({ label, on, onChange }: Props) => {
-  console.log(label, on)
-
+const Checkbox = ({ label = 'Label', checked = false, onChange }: Props) => {
   return (
-    <span>
+    <label>
       {label}
-      <input type="checkbox" defaultChecked={on} onChange={onChange} />
-    </span>
+      <input type="checkbox" defaultChecked={checked} onChange={onChange} />
+    </label>
   )
-})
+}
 
 export default Checkbox

@@ -20,6 +20,9 @@ const SomeComponent = ({ children }: SomeComponentProps) => (
 function App() {
   return (
     <div>
+      <div style={{ width: 200, height: 100, backgroundColor: 'black' }}></div>
+      <div css={{ width: 200, height: 100, backgroundColor: 'black' }}></div>
+
       <SomeComponent />
       <Box bgColor="red" />
     </div>

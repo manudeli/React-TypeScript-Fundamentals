@@ -61,8 +61,10 @@
     "@storybook/addon-actions": "^6.3.9",
     "@storybook/addon-essentials": "^6.3.9",
     "@storybook/addon-links": "^6.3.9",
+    "@storybook/addons": "^6.3.10",
     "@storybook/node-logger": "^6.3.9",
     "@storybook/preset-create-react-app": "^3.2.0",
-    "@storybook/react": "^6.3.9"
+    "@storybook/react": "^6.3.9",
+    "@storybook/theming": "^6.3.10"
   }
 }

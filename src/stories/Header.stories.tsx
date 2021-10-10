@@ -4,14 +4,8 @@ import Header from '../components/Header'
 export default {
   title: 'Component/Header',
   component: Header,
-  argsTypes: {
-    level: {
-      control: {
-        type: 'range',
-        min: 1,
-        max: 6,
-      },
-    },
+  argTypes: {
+    level: { control: { type: 'inline-radio' } },
   },
 } as ComponentMeta<typeof Header>
 

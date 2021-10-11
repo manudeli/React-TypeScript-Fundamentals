@@ -1,15 +1,18 @@
 import styled from '@emotion/styled'
 import React from 'react'
 import Task from './Task'
+import { useTasks } from '../contexts/TaskProvider'
 
 interface Props {}
 
 const TaskList = ({}: Props) => {
+  const { tasks } = useTasks()
+
   return (
     <UnorderedList>
-      <Task content="Test" />
-      <Task content="Test" />
-      <Task content="Test" />
+      {tasks.map(({ id, content, complete }) => (
+        <Task key={id} id={id} content={content} complete={complete} />
+      ))}
     </UnorderedList>
   )
 }
@@ -22,7 +25,7 @@ const UnorderedList = styled.ul`
   padding: 0;
 
   & > li {
-    &:not(:first-child) {
+    &:not(:first-of-child) {
       margin-top: 8px;
     }
   }

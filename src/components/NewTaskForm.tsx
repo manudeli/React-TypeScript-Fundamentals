@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import React, { FormEvent, useState } from 'react'
+import { useTasks } from '../contexts/TaskProvider'
 
 interface Props {
   [x: string]: any
@@ -7,9 +8,11 @@ interface Props {
 
 const NewTaskForm = (props: Props) => {
   const [task, setTask] = useState('')
+  const { addTask } = useTasks()
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
+    addTask(task)
     setTask('')
   }
 

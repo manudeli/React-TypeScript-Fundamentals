@@ -1,5 +1,6 @@
 import { createContext, ReactNode, useContext, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import useLocalStorage from '../hooks/useLocalStorage'
 
 interface TaskState {
   id: string
@@ -20,7 +21,7 @@ const TaskContext = createContext<ContextProps>({ tasks: [] })
 export const useTasks = () => useContext<ContextProps>(TaskContext)
 
 const TaskProvider = ({ children }: ProviderProps) => {
-  const [tasks, setTasks] = useState<TaskState[]>([])
+  const [tasks, setTasks] = useLocalStorage<TaskState>('tasks', [])
 
   const addTask = (content: string) => {
     setTasks([

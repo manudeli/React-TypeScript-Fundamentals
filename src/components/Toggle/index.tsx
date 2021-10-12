@@ -1,24 +1,36 @@
 import styled from '@emotion/styled'
-import React, { ChangeEvent } from 'react'
-import useToggle from '../hooks/useToggle'
+import useToggle from '../../hooks/useToggle'
 
 interface Props {
+  name: string
   on: boolean
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
-  [x: string]: any
+  disabled: boolean
+  onChange: () => void
 }
 
-const Toggle = ({ on = false, onChange, ...props }: Props) => {
+const Toggle = ({
+  name,
+  on = false,
+  disabled = false,
+  onChange,
+  ...props
+}: Props) => {
   const [checked, toggle] = useToggle(on)
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = () => {
     toggle()
-    onChange && onChange(e)
+    onChange()
   }
 
   return (
     <ToggleContainer {...props}>
-      <ToggleInput type="checkbox" onChange={handleChange} checked={checked} />
+      <ToggleInput
+        type="checkbox"
+        name={name}
+        checked={checked}
+        disabled={disabled}
+        onChange={handleChange}
+      />
       <ToggleSwitch />
     </ToggleContainer>
   )
@@ -34,22 +46,23 @@ const ToggleContainer = styled.label`
 
 const ToggleSwitch = styled.div`
   width: 54px;
+  height: 30px;
+  padding: 3px;
   border-radius: 15px;
   background-color: #ccc;
+  transition: background-color 150ms;
   box-sizing: border-box;
-  transition: background-color 0.2s;
-  padding: 1px;
 
   &:after {
     content: '';
     position: relative;
     left: 0;
     display: block;
-    width: 26px;
-    height: 26px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background-color: white;
-    transition: left 0.2s;
+    transition: left 150ms;
   }
 `
 
@@ -58,9 +71,16 @@ const ToggleInput = styled.input`
 
   &:checked + div {
     background: lightgreen;
+    &:after {
+      left: calc(100% - 25px);
+    }
   }
+  &:disabled + div {
+    opacity: 0.7;
+    cursor: not-allowed;
 
-  &:checked + div:after {
-    left: calc(100% - 26px);
+    &:after {
+      opacity: 0.7;
+    }
   }
 `

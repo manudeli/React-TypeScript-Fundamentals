@@ -4,9 +4,22 @@ import Toggle from '../components/Toggle'
 export default {
   title: 'Component/Toggle',
   component: Toggle,
-  argsTypes: {},
 } as ComponentMeta<typeof Toggle>
 
 export const Default: ComponentStory<typeof Toggle> = (args) => {
-  return <Toggle {...args} />
+  return (
+    <>
+      <Toggle {...args} on={false} />
+      <Toggle {...args} on={true} />
+    </>
+  )
+}
+
+export const Disabled: ComponentStory<typeof Toggle> = (args) => {
+  return (
+    <>
+      <Toggle {...args} on={false} disabled={true} />
+      <Toggle {...args} on={true} disabled={true} />
+    </>
+  )
 }

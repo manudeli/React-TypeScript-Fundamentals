@@ -4,7 +4,7 @@ import Boilerplate from '../components/Boilerplate'
 export default {
   title: 'Component/Boilerplate',
   component: Boilerplate,
-  argsTypes: {},
+  argTypes: {},
 } as ComponentMeta<typeof Boilerplate>
 
 export const Default: ComponentStory<typeof Boilerplate> = (args) => {

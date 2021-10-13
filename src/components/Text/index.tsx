@@ -5,13 +5,13 @@ interface Props {
   children: ReactNode
   block?: boolean
   paragraph?: boolean
-  size: number | 'small' | 'normal' | 'large'
-  strong: boolean
-  underline: boolean
-  delete: boolean
-  color: string
-  mark: boolean
-  code: boolean
+  size?: number | 'small' | 'normal' | 'large'
+  strong?: boolean
+  underline?: boolean
+  delete?: boolean
+  color?: string
+  mark?: boolean
+  code?: boolean
   [x: string]: any
 }
 

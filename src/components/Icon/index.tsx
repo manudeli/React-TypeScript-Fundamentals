@@ -3,10 +3,10 @@ import React from 'react'
 
 interface Props {
   name: FeatherIconNameType
-  size: number
-  strokeWidth: number
+  size?: number
+  strokeWidth?: number
   rotate?: number
-  color: string
+  color?: string
 }
 
 const Icon = ({

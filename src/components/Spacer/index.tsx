@@ -7,8 +7,8 @@ import React, {
 } from 'react'
 
 interface Props {
-  type: 'horizontal' | 'vertical'
-  size: number
+  type?: 'horizontal' | 'vertical'
+  size?: number
   children: ReactNode
   [x: string]: any
 }

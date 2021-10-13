@@ -22,7 +22,7 @@ interface Props {
   src: string
   width?: number | 'auto'
   height?: number
-  alt: string
+  alt?: string
   mode?: 'cover' | 'fill' | 'contain'
   [x: string]: any
 }

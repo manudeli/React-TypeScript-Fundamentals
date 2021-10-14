@@ -111,7 +111,7 @@ const Track = styled.div`
   position: absolute;
   top: 6px;
   left: 0;
-  wdith: 0;
+  width: 0;
   height: 4px;
   border-radius: 2px;
   background-color: #44b;

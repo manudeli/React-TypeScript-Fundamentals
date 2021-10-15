@@ -4,7 +4,7 @@ interface Props {
   level?: 1 | 2 | 3 | 4 | 5 | 6
   strong?: boolean
   underline?: boolean
-  color: string
+  color?: string
   [x: string]: any
 }
 

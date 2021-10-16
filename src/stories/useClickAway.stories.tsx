@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { RefObject, useState } from 'react'
+import { useState } from 'react'
 import useClickAway from '../hooks/useClickAway'
 
 export default {

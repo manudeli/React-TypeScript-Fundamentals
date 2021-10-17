@@ -1,5 +1,4 @@
-import { useEffect } from '@storybook/client-api'
-import { useCallback } from 'react'
+import { useCallback, useEffect } from 'react'
 import { EventKeyValue } from './EventKeyValueType'
 
 type KeyEvent = 'keydown' | 'keyup'

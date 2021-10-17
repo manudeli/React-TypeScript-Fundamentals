@@ -1,5 +1,4 @@
-import { useCallback } from '@storybook/client-api'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useCallback } from 'react'
 
 const useTimeoutFn = (fn: () => void, second: number) => {
   const timeoutId = useRef<NodeJS.Timeout>()

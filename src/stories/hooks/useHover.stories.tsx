@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { RefObject } from 'react'
-import useHover from '../../hooks/useHover'
+import { useHover } from '../../hooks'
 
 export default {
   title: 'Hook/useHover',

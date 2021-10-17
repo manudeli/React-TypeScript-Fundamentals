@@ -1,5 +1,5 @@
 import { ComponentStory } from '@storybook/react'
-import Flux from '../../components/Flux'
+import { Flux } from '../../components'
 const { Row, Col } = Flux
 
 export default {

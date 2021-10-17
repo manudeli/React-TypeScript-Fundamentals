@@ -1,6 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import Header from '../../components/Header'
-import Tab from '../../components/Tab'
+import { Header, Tab } from '../../components'
 
 export default {
   title: 'Component/Tab',

@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import Icon from '../../components/Icon'
+import { Icon } from '../../components'
 
 const iconNameOptions = [
   'arrow-down-left',

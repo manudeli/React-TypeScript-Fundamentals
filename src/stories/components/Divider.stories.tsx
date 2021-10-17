@@ -1,6 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import Divider from '../../components/Divider'
-import Text from '../../components/Text'
+import { Divider, Text } from '../../components'
 
 export default {
   title: 'Component/Divider',

@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import Toggle from '../../components/Toggle'
+import { Toggle } from '../../components'
 
 export default {
   title: 'Component/Toggle',

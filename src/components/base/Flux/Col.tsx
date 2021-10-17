@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import React, { ReactNode, useMemo } from 'react'
+import { ReactNode, useMemo } from 'react'
 import FluxProvider, { useFlux } from './FluxProvider'
 
 interface Props {

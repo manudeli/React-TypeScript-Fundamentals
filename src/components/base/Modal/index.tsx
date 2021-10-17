@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { ReactNode, useEffect, useMemo } from 'react'
 import ReactDom from 'react-dom'
-import useClickAway from '../../hooks/useClickAway'
+import useClickAway from '../../../hooks/useClickAway'
 
 interface Props {
   children?: ReactNode

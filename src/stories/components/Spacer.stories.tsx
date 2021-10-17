@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { CSSProperties } from 'react'
-import Spacer from '../../components/Spacer'
+import { Spacer } from '../../components'
 
 export default {
   title: 'Component/Spacer',

@@ -1,7 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import Icon from '../../components/Icon'
-import Slider from '../../components/Slider'
-import Spacer from '../../components/Spacer'
+import { Icon, Slider, Spacer } from '../../components'
 
 export default {
   title: 'Component/Slider',

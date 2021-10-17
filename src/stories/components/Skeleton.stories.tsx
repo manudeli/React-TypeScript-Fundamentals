@@ -1,5 +1,5 @@
 import { ComponentStory } from '@storybook/react'
-import Skeleton from '../../components/Skeleton'
+import { Skeleton } from '../../components'
 
 export default {
   title: 'Component/Skeleton',

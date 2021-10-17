@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { useState } from 'react'
-import Image from '../../components/Image'
-import useResize from '../../hooks/useResize'
+import { Image } from '../../components'
+import { useResize } from '../../hooks'
 
 export default {
   title: 'Hook/useResize',

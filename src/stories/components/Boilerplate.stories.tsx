@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import Boilerplate from '../../components/Boilerplate'
+import { Boilerplate } from '../../components'
 
 export default {
   title: 'Component/Boilerplate',

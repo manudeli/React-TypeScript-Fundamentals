@@ -1,4 +1,4 @@
-import useTimeoutFn from '../../hooks/useTimeoutFn'
+import { useTimeoutFn } from '../../hooks'
 
 export default {
   title: 'Hook/useTimeoutFn',

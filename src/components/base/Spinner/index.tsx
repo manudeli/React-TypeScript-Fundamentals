@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from '@emotion/styled'
 
 const Icon = styled.i`
@@ -7,9 +6,9 @@ const Icon = styled.i`
 `
 
 interface Props {
-  size: number
-  color: string
-  loading: boolean
+  size?: number
+  color?: string
+  loading?: boolean
 }
 
 const Spinner = ({ size = 24, color = '#919EAB', loading = true }: Props) => {

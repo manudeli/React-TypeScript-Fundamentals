@@ -31,7 +31,7 @@ export const Default = () => {
         )
       }
     },
-    0.3,
+    300,
     [value]
   )
 

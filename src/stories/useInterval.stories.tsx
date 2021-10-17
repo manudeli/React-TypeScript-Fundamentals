@@ -9,7 +9,7 @@ export const Default = () => {
   const [array, setArray] = useState<string[]>([])
   const clear = useInterval(() => {
     setArray([...array, '추가됨'])
-  }, 1)
+  }, 1000)
 
   return (
     <>

@@ -5,7 +5,7 @@ export default {
 }
 
 export const Default = () => {
-  const time = 3
+  const time = 3000
   const completedText = '완료!'
 
   const [run, clear] = useTimeoutFn(() => {

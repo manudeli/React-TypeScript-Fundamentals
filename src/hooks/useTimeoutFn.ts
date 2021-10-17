@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback } from 'react'
 
-const useTimeoutFn = (fn: () => void, second: number) => {
+const useTimeoutFn = (fn: () => void, ms: number) => {
   const timeoutId = useRef<NodeJS.Timeout>()
   const callback = useRef(fn)
 
@@ -13,8 +13,8 @@ const useTimeoutFn = (fn: () => void, second: number) => {
 
     timeoutId.current = setTimeout(() => {
       callback.current()
-    }, second * 1000)
-  }, [second])
+    }, ms)
+  }, [ms])
 
   const clear = useCallback(() => {
     timeoutId.current && clearTimeout(timeoutId.current)

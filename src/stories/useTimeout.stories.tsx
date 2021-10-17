@@ -7,7 +7,7 @@ export default {
 export const Default = () => {
   const clear = useTimeout(() => {
     alert('실행!')
-  }, 3)
+  }, 3000)
 
   return (
     <>
